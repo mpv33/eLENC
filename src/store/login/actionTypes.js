@@ -1,0 +1,3 @@
+export const LOGIN_ACTION = 'LOGIN_ACTION'
+export const READY_TO_START_ACTION = 'READY_TO_START_ACTION'
+
