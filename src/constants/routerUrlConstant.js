@@ -2,9 +2,13 @@
 export const ROUTER_URL_CONSTANT = {
   MAIN: '/',
   LOGIN:  '/login',
-  DASHBOARD:  '/dashboard',
-  READY_TO_START:  '/ready-to-start',
- 
+  SIGNUP:  '/signup',
+  SDEKIT:  '/sde-kit',
+  SHOPPING:  '/shopping',
+  ENTERTAINMENT:  '/entertainment',
+  FUNACADEMY:  '/fun-academy',
+  SOCIALNETWORK:  '/mbook',
+  
 }
 
 
