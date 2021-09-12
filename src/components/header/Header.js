@@ -1,12 +1,10 @@
 import React from 'react'
 import Navbar from './NavBar'
-import ImageSlider from './Slider'
 
 function Header() {
     return (
-        <div>
+        <div className='nab_header'>
             <Navbar />
-            <ImageSlider />
         </div>
     )
 }

@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
+    <nav > 
       <div className="logo">
         <NavLink exact to='/'><img src={logo} height='80px' width='240px' />   </NavLink>
       </div>

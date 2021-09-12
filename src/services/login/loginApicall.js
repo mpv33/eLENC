@@ -8,7 +8,7 @@ import { actionTypes } from '../../store/login'
 
 export function LoginAction(params, history) {
   console.log(':::::::::::',params.email)
-  const url =API_URL_CONSTANT.login + API_URL_CONSTANT.signup + params.email
+  const url =API_URL_CONSTANT.baseUrl + API_URL_CONSTANT.login
   return (dispatch) => {
    
     getReqParam(url)
@@ -31,7 +31,7 @@ export function LoginAction(params, history) {
               payload: response.data.data,
             })
             dispatch({ type: actionTypes.LOGIN_ACTION, payload: params.email })
-            history.push(ROUTER_URL_CONSTANT.READY_TO_START)
+            history.push(ROUTER_URL_CONSTANT.MAIN)
           }
         }
       })
