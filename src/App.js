@@ -1,12 +1,22 @@
-
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, } from 'react-router-dom';
+import RootRouter from './RootRouter'
+import Header from "./components/header/Header";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-       <h1> Welcome in E-LENC</h1>
-       <h4>  purpose of e-Lenc: integration e-learning/entertainment/shopping/networking </h4>
-    </div>
+
+    <Router>
+
+      <div className='container'>
+        <Header />
+        <RootRouter />
+      </div>
+
+
+    </Router>
+
   );
 }
 
