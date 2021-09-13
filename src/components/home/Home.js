@@ -54,10 +54,10 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 SDE Kit
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                             SDE Kit is an eLearning plateform where we are providing complete 
+                             interview preparations content for software engineer role.
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
-                                <Button variant="contained"> 
+                                <Button variant="contained" > 
                                  <Link exact to='/sde-kit'>
                                  Explore
                                 </Link> </Button>
@@ -70,8 +70,8 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 Fun Academy
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            Fun Academy is an Learning with fun plateform where we are providing some 
+                            fun/creative app.
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
                                 <Button variant="contained"> 
                                  <Link exact to='/fun-academy'>
@@ -85,8 +85,8 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                             Entertainment
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            Entertainment is an collection of vedio/music streaming 
+                            plateform where we are providing clone of You Tube and Netflix.
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
                                 <Button variant="contained"> 
                                  <Link exact to='/entertainment'>
@@ -100,8 +100,8 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 MBook
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            MBook is a social network plateform where we are providing similar to FB/Insta clone 
+        
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
                                 <Button variant="contained"> 
                                  <Link exact to='/mbook'>
@@ -113,10 +113,9 @@ export default function Home() {
                     <Grid className={classes.card} item xs={10} sm={5}>
                         <Paper className={classes.paper}>
                             <Typography variant="h6" gutterBottom>
-                             Shopping
+                             MyShop
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            MyShop is an eCommorce plateform where we are providing Trending products detials and everyone can buy.
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
                                 <Button variant="contained"> 
                                  <Link exact to='/shopping'>
@@ -130,8 +129,7 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 Games
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            Games is a collection of web games plateform where we can play with friends or single .
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
                                 <Button variant="contained"> 
                                  <Link exact to='/games'>
