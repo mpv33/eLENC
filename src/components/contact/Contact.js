@@ -60,7 +60,7 @@ const Contact = () => {
                     <Grid className={classes.card} xs={10} sm={10}>
                         <Paper className={classes.paper}>
                             <Grid container alignItems='center' justifyContent='center'>
-                                <Grid className={classes.textField} item xs={10} sm={8}>
+                                <Grid className={classes.textField} item xs={12} sm={8}>
                                     <TextField id="standard-basic"
                                         
                                         style={{width:'90%'}}
@@ -70,7 +70,7 @@ const Contact = () => {
                                     />
                                 </Grid>
 
-                                <Grid className={classes.textField} item xs={10} sm={8}>
+                                <Grid className={classes.textField} item xs={12} sm={8}>
                                     <TextField id="standard-basic"
                                     
                                         style={{width:'90%'}}
@@ -80,7 +80,7 @@ const Contact = () => {
                                     />
                                 </Grid>
 
-                                <Grid className={classes.textField} className={classes.paper}  item xs={10} sm={10}>
+                                <Grid className={classes.textField} className={classes.paper}  item xs={12} sm={10}>
                                     <TextareaAutosize aria-label="Message"
                                         minRows={5}
                                         style={{width:'70%'}}
