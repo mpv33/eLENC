@@ -1,16 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import ImageSlider from '../header/Slider'
 import Footer from '../footer/Footer'
 import Contact from '../contact/Contact';
+import {Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         paddingTop: 30,
-        padding:20
+        padding: 20
     },
     paper: {
         padding: theme.spacing(2),
@@ -36,7 +38,7 @@ export default function Home() {
                         <Typography variant="h5" gutterBottom>
                             Our's Mission
                         </Typography>
-                        <Paper className={classes.paper}> Trying to integrate everythings
+                        <Paper className={classes.paper}> Trying to privide everythings
                             at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .</Paper>
                     </Grid>
                 </Grid>
@@ -44,7 +46,7 @@ export default function Home() {
 
             <div className={classes.root}>
                 <Typography variant="h5" gutterBottom>
-                    Our Module's
+                    Our Products
                 </Typography>
                 <Grid container xs={12} justifyContent="center">
                     <Grid className={classes.card} item xs={10} sm={5}>
@@ -52,8 +54,15 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 SDE Kit
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                             SDE Kit is an eLearning plateform where we are providing complete 
+                             interview preparation package for software engineer role.
+                            <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
+                                <Button variant="contained" > 
+                                 <Link exact to='/sde-kit'>
+                                 Explore
+                                </Link> </Button>
+                            </Grid>
+
                         </Paper>
                     </Grid>
                     <Grid className={classes.card} item xs={10} sm={5}>
@@ -61,17 +70,29 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 Fun Academy
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            Fun Academy is a fun plateform where we are providing some learning with
+                            fun/creative  app.
+                            <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
+                                <Button variant="contained"> 
+                                 <Link exact to='/fun-academy'>
+                                 Explore
+                                </Link> </Button>
+                            </Grid>
                         </Paper>
                     </Grid>
                     <Grid className={classes.card} item xs={10} sm={5}>
                         <Paper className={classes.paper}>
                             <Typography variant="h6" gutterBottom>
-                                eCommorce
+                            Entertainment
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            Entertainment is an collection of vedio/music streaming 
+                            plateform where we are providing clone of You Tube and Netflix.
+                            <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
+                                <Button variant="contained"> 
+                                 <Link exact to='/entertainment'>
+                                 Explore
+                                </Link> </Button>
+                            </Grid>
                         </Paper>
                     </Grid>
                     <Grid className={classes.card} item xs={10} sm={5}>
@@ -79,26 +100,42 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 MBook
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            MBook is a social network plateform where we are providing similar to FB/Insta clone 
+        
+                            <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
+                                <Button variant="contained"> 
+                                 <Link exact to='/mbook'>
+                                 Explore
+                                </Link> </Button>
+                            </Grid>
                         </Paper>
                     </Grid>
                     <Grid className={classes.card} item xs={10} sm={5}>
                         <Paper className={classes.paper}>
                             <Typography variant="h6" gutterBottom>
-                                Entertainment
+                             MyShop
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            MyShop is an eCommorce plateform where we are providing Trending products detials and everyone can buy.
+                            <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
+                                <Button variant="contained"> 
+                                 <Link exact to='/shopping'>
+                                 Explore
+                                </Link> </Button>
+                            </Grid>
                         </Paper>
                     </Grid>
                     <Grid className={classes.card} item xs={10} sm={5}>
                         <Paper className={classes.paper}>
                             <Typography variant="h6" gutterBottom>
-                                My Blogs
+                                Games
                             </Typography>
-                            Trying to integrate everythings
-                            at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .
+                            Games is a collection of web games plateform where we can play with friends or single .
+                            <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
+                                <Button variant="contained"> 
+                                 <Link exact to='/games'>
+                                 Explore
+                                </Link> </Button>
+                            </Grid>
                         </Paper>
                     </Grid>
 
@@ -106,8 +143,8 @@ export default function Home() {
 
                 </Grid>
             </div>
-        <Contact />
-        <Footer />
-         </>
+            <Contact />
+            <Footer />
+        </>
     );
 }

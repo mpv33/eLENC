@@ -24,6 +24,10 @@ export const MenuList = [
       url: "/mbook",
     },
     {
+      title: "Games",
+      url: "/games",
+    },
+    {
       title: "Login",
       url: "/login",
     },
