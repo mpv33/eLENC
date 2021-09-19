@@ -3,7 +3,7 @@ import { BrowserRouter as Router, } from 'react-router-dom';
 import RootRouter from './RootRouter'
 import Header from "./components/header/Header";
 import "./App.css";
-import 'ui-neumorphism/dist/index.css'
+
 
 function App() {
   return (

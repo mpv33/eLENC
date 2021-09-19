@@ -38,7 +38,7 @@ export default function Home() {
                         <Typography variant="h5" gutterBottom>
                             Our's Mission
                         </Typography>
-                        <Paper className={classes.paper}> Trying to integrate everythings
+                        <Paper className={classes.paper}> Trying to privide everythings
                             at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .</Paper>
                     </Grid>
                 </Grid>
@@ -55,7 +55,7 @@ export default function Home() {
                                 SDE Kit
                             </Typography>
                              SDE Kit is an eLearning plateform where we are providing complete 
-                             interview preparations content for software engineer role.
+                             interview preparation package for software engineer role.
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
                                 <Button variant="contained" > 
                                  <Link exact to='/sde-kit'>
@@ -70,8 +70,8 @@ export default function Home() {
                             <Typography variant="h6" gutterBottom>
                                 Fun Academy
                             </Typography>
-                            Fun Academy is an Learning with fun plateform where we are providing some 
-                            fun/creative app.
+                            Fun Academy is a fun plateform where we are providing some learning with
+                            fun/creative  app.
                             <Grid container justifyContent="center" style={{ paddingTop: 10 }}>
                                 <Button variant="contained"> 
                                  <Link exact to='/fun-academy'>
