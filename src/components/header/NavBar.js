@@ -4,11 +4,13 @@ import { MenuList } from "./MenuList";
 import logo from './logo.png'
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
- 
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
   const menuList = MenuList.map(({ url, title }, index) => {
     return (
       <li key={index}>
-          <NavLink exact to={url} activeClassName="active">
+          <NavLink exact to={url} activeClassName="active close" onClick={handleClick}>
             {title}
           </NavLink>
       </li>
@@ -16,9 +18,6 @@ const Navbar = () => {
 
   });
 
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
 
   return (
     <nav > 
