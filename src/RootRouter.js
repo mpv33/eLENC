@@ -23,7 +23,7 @@ const CheckAuth = () => {
 const AuthGuardRoute = () => {
   return ({ component: Component, ...rest }) => {
     return (
-      <div>
+      <div className="top-root">
         <Route
           {...rest}
           render={(props) =>
