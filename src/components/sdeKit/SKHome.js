@@ -1,10 +1,11 @@
 import React from 'react'
+import LastPage from './LastPage'
+import QuizPage from './QuizPage'
 
 function SKHome() {
     return (
-        <div>
-            <h1> sde kit home</h1>
-        </div>
+        // <LastPage value={76} />
+        <QuizPage />
     )
 }
 
