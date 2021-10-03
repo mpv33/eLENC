@@ -1,13 +1,112 @@
 
- /*  start header  */
+.course-container
+{
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
  
+}
+
+.process{
+  height: 70px;
+    width: 70px;
+}
+.item h2{
+  padding: 5px;
+  font-weight: 400;
+  font-size: larger;
+
+}
+.header-part{
+  display:flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.heading
+{
+  width: 80%;
+  display: flex;
+  
+ 
+ 
+}
+.heading h1
+{
+text-align: left;
+padding-top: 20px;
+padding-bottom: 20px;
+text-transform: uppercase;
+ 
+ 
+}
+
+
+.main-content
+{
+  width: 80%;
+}
+.accordian{
+  width: 80%;
+ 
+}
+.item
+{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-left: .25rem solid #4e73df!important;
+  border-radius: .35rem;
+
+}
+.CircularProgressbar-text{
+  font-weight: 500;
+}
+.CircularProgressbar-path{
+  stroke: #4e73df;
+}
+.content p{
+  padding:20px;
+}
+.content{
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+  text-align: initial;
+  
+}
+.content.show
+{
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
 nav {
-  background:#c1d4f0;
+  background: #c1d4f0;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   position: relative;
   z-index: 99;
+  /* overflow: hidden; */
+  /* background-color: #666666; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.top-root{
+  
+    margin-top: 80px;
+
 }
 
 .fas {
@@ -117,6 +216,7 @@ nav {
 
  .slider{
    background-color: white;
+
  }
  .si{
    display: flex !important;
@@ -215,6 +315,7 @@ ul{
     width: 100%;
 }
 }
+
 
 /*  footer end */
 

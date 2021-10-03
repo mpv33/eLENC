@@ -31,4 +31,8 @@ export const MenuList = [
       title: "Login",
       url: "/login",
     },
+    {
+      title:"Course",
+      url:"/course"
+    }
   ];
