@@ -10,6 +10,7 @@ import SignUp from './components/auth/Signup'
 import MBHome from './components/mBook/MBHome'
 import SHome from './components/shopping/SHome'
 import Course from './components/course/Course'
+import GameHome from './components/games/GameHome';
 
 
 
@@ -53,6 +54,8 @@ function RootRouter() {
       <AuthGuard exact path={ROUTER_URL_CONSTANT.SHOPPING} component={SHome} />
       <AuthGuard exact path={ROUTER_URL_CONSTANT.SOCIALNETWORK} component={MBHome} />
       <AuthGuard exact path={ROUTER_URL_CONSTANT.COURSE} component={Course} />
+      <AuthGuard exact path={ROUTER_URL_CONSTANT.Games} component={GameHome} />
+     
     </Switch>
  
   

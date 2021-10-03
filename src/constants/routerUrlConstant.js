@@ -9,6 +9,7 @@ export const ROUTER_URL_CONSTANT = {
   FUNACADEMY:  '/fun-academy',
   SOCIALNETWORK:  '/mbook',
   COURSE:  '/course',
+  Games:  '/games',
   
 }
 

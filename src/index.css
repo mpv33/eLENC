@@ -16,7 +16,11 @@
   overflow-y: scroll;
   text-align: center;
 }
+a{
+  text-decoration-line: none;
+} 
+a:hover{
+  text-decoration-line:underline;
+} 
 
-/* .nab_header {
-  position:sticky;
-} */
+
