@@ -1,11 +1,10 @@
 import React from 'react'
-import LastPage from './LastPage'
-import QuizPage from './QuizPage'
+import FirstPage from './FirstPage'
+
 
 function SKHome() {
     return (
-        // <LastPage value={76} />
-        <QuizPage />
+        <FirstPage />
     )
 }
 

@@ -45,14 +45,14 @@ function RootRouter() {
 
     <Switch>
       <Route exact path={ROUTER_URL_CONSTANT.MAIN} component={Home}/>
-      <Route exact path={ROUTER_URL_CONSTANT.LOGIN} component={LogIn} />
-      <Route exact path={ROUTER_URL_CONSTANT.SIGNUP} component={SignUp} />
-      <AuthGuard exact path={ROUTER_URL_CONSTANT.ENTERTAINMENT} component={EHome} />
-      <AuthGuard exact path={ROUTER_URL_CONSTANT.FUNACADEMY} component={FAHome} />
-      <AuthGuard exact path={ROUTER_URL_CONSTANT.SDEKIT} component={SKHome} />
-      <AuthGuard exact path={ROUTER_URL_CONSTANT.SHOPPING} component={SHome} />
-      <AuthGuard exact path={ROUTER_URL_CONSTANT.SOCIALNETWORK} component={MBHome} />
-      <AuthGuard exact path={ROUTER_URL_CONSTANT.Games} component={GameHome} />
+      <Route  path={ROUTER_URL_CONSTANT.LOGIN} component={LogIn} />
+      <Route  path={ROUTER_URL_CONSTANT.SIGNUP} component={SignUp} />
+      <AuthGuard  path={ROUTER_URL_CONSTANT.ENTERTAINMENT} component={EHome} />
+      <AuthGuard  path={ROUTER_URL_CONSTANT.FUNACADEMY} component={FAHome} />
+      <AuthGuard  path={ROUTER_URL_CONSTANT.SDEKIT} component={SKHome} />
+      <AuthGuard  path={ROUTER_URL_CONSTANT.SHOPPING} component={SHome} />
+      <AuthGuard  path={ROUTER_URL_CONSTANT.SOCIALNETWORK} component={MBHome} />
+      <AuthGuard  path={ROUTER_URL_CONSTANT.Games} component={GameHome} />
      
     </Switch>
  
