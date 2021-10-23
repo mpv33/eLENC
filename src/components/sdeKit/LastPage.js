@@ -1,14 +1,37 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
+import { Route, useRouteMatch } from 'react-router-dom'
 import './scrollCss.style.css'
 import {
   BoldText,
   LastPageContainer,
   ProgressCircle,
   SdkButton,
-} from './SdkLastPage'
+} from './components'
+import {SideLink} from './navigations'
 const LastPage = (props) => {
+  let { path, url } = useRouteMatch()
+  let { value, route } = props
+  console.log(value, route)
+  return (
+    <div style={{ display: 'flex' , backgroundColor: '#fff'}}>
+      <SideLink url={url} course={route} />
+      {route.map((item) => {
+        return (
+          <Route path={`${path}/${item.name}`}>
+            <Content title={item.name} value={90} />
+          </Route>
+        )
+      })}
+      <Route path={`${path}`}></Route>
+    </div>
+  )
+}
+
+export default LastPage
+
+const Content = (props) => {
   return (
     <div
       style={{
@@ -21,7 +44,7 @@ const LastPage = (props) => {
       <LastPageContainer
         border={true}
         justifyContent="center"
-        alignItems="space-between"
+        alignItems="center"
         minHeight="100px"
       >
         <LastPageContainer
@@ -35,7 +58,7 @@ const LastPage = (props) => {
             color={true}
             title=" Learning notes"
           />
-          <BoldText variant="h2" size={24} title="Introduction to javascript" />
+          <BoldText variant="h2" size={24} title={props.title} />
         </LastPageContainer>
         <ProgressCircle value={props.value} />
       </LastPageContainer>
@@ -46,7 +69,7 @@ const LastPage = (props) => {
           flexDirection: 'column',
           height: '76vh',
           overflowY: 'scroll',
-          paddingTop: '20px'
+          paddingTop: '20px',
         }}
       >
         <BoldText
@@ -83,8 +106,6 @@ const LastPage = (props) => {
     </div>
   )
 }
-
-export default LastPage
 
 const strings = `
 
