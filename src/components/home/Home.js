@@ -38,7 +38,7 @@ export default function Home() {
                         <Typography variant="h5" gutterBottom>
                             Our's Mission
                         </Typography>
-                        <Paper className={classes.paper}> Trying to privide everythings
+                        <Paper className={classes.paper}> We areTrying to privide everythings
                             at one place like -eLearning ,eCommorce,Vedio streaming ,Social network .</Paper>
                     </Grid>
                 </Grid>

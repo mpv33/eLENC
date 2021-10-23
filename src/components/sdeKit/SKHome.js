@@ -1,10 +1,10 @@
 import React from 'react'
+import FirstPage from './FirstPage'
+
 
 function SKHome() {
     return (
-        <div>
-            <h1> sde kit home</h1>
-        </div>
+        <FirstPage />
     )
 }
 
