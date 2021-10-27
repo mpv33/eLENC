@@ -1,25 +1,26 @@
 const _ = require('lodash');
-const Course = require('../models/course');
+const DSA = require('../models/dsa');
 const formidable = require('formidable');
 const fs = require('fs');
 
-//course
-exports.courseById = (req, res, next, id) => {
-    Course.findById(id)
+
+//dsa
+exports.dsaById = (req, res, next, id) => {
+    DSA.findById(id)
         .exec((err, course) => {
             if (err || !course) {
                 return res.status(400).json({
                     error: 'course not found'
                 });
             }
-            req.course = course;     
+            req.dsa= course;     
             next();
         });
 };
 
 
-exports.allCourse = (req, res) => {
-    Course.find((err,c) => {
+exports.dsa = (req, res) => {
+    DSA.find((err,c) => {
         if (err) {
             return res.status(400).json({
                 error: err
@@ -29,23 +30,23 @@ exports.allCourse = (req, res) => {
     }).select("title")
 };
 
-exports.getCourse = (req, res) => {
-    return res.json(req.course);
+exports.getdsa = (req, res) => {
+    return res.json(req.dsa);
 };
 
-exports.createCourse = async (req, res) => {
-    const courseExists = await Course.findOne({ title: req.body.title });
+exports.createdsa = async (req, res) => {
+    const courseExists = await DSA.findOne({ title: req.body.title });
     if (courseExists)
         return res.status(403).json({
             error: 'title is taken!'
         });
-    const course = await new Course(req.body);
+    const course = await new DSA(req.body);
     await course.save();
     res.status(200).json({ message: 'course successfully! created.' });
 
 };
 
-exports.updateCourse = (req, res,next) => {
+exports.updatedsa = (req, res,next) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
     form.parse(req, (err, fields, files) => {
@@ -55,7 +56,7 @@ exports.updateCourse = (req, res,next) => {
             });
         }
         // save course
-        let course = req.course;
+        let course = req.dsa;
       
         course = _.extend(course, fields);
 
@@ -81,8 +82,8 @@ exports.updateCourse = (req, res,next) => {
 
 
 
-exports.deleteCourse = (req, res, next) => {
-    let course = req.course;
+exports.deletedsa = (req, res, next) => {
+    let course = req.dsa;
     course.remove((err, user) => {
         if (err) {
             return res.status(400).json({

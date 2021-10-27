@@ -25,6 +25,9 @@ mongoose.connection.on('error', err => {
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const courseRoutes = require('./routes/course');
+const pythonRoutes = require('./routes/python');
+const jsRoutes = require('./routes/javascript');
+const dsaRoutes = require('./routes/dsa');
 // apiDocs
 app.get('/', (req, res) => {
     fs.readFile('docs/apiDocs.json', (err, data) => {
@@ -57,9 +60,13 @@ app.use(express.json())
 app.use(cookieParser());
 app.use(expressValidator());
 app.use(cors());
-app.use('/api', courseRoutes);
+
 app.use('/api', authRoutes);
 app.use('/api', userRoutes);
+app.use('/api/c', courseRoutes);
+app.use('/api/c1', pythonRoutes);
+app.use('/api/c2', jsRoutes);
+app.use('/api/c3', dsaRoutes);
 
 app.use(function(err, req, res, next) {
     if (err.name === 'UnauthorizedError') {

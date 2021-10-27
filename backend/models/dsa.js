@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const { ObjectId } = mongoose.Schema;
 
-const courseSchema = new mongoose.Schema({
+
+const dsaSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -27,4 +28,4 @@ const courseSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('Course', courseSchema);
+module.exports = mongoose.model('DSA', dsaSchema);

@@ -1,25 +1,26 @@
 const _ = require('lodash');
-const Course = require('../models/course');
+const JS = require('../models/javascript');
 const formidable = require('formidable');
 const fs = require('fs');
 
-//course
-exports.courseById = (req, res, next, id) => {
-    Course.findById(id)
+
+//javascript
+exports.javascriptById = (req, res, next, id) => {
+    JS.findById(id)
         .exec((err, course) => {
             if (err || !course) {
                 return res.status(400).json({
                     error: 'course not found'
                 });
             }
-            req.course = course;     
+            req.js= course;     
             next();
         });
 };
 
 
-exports.allCourse = (req, res) => {
-    Course.find((err,c) => {
+exports.javascript = (req, res) => {
+    JS.find((err,c) => {
         if (err) {
             return res.status(400).json({
                 error: err
@@ -29,23 +30,23 @@ exports.allCourse = (req, res) => {
     }).select("title")
 };
 
-exports.getCourse = (req, res) => {
-    return res.json(req.course);
+exports.getjavascript = (req, res) => {
+    return res.json(req.js);
 };
 
-exports.createCourse = async (req, res) => {
-    const courseExists = await Course.findOne({ title: req.body.title });
+exports.createjavascript = async (req, res) => {
+    const courseExists = await JS.findOne({ title: req.body.title });
     if (courseExists)
         return res.status(403).json({
             error: 'title is taken!'
         });
-    const course = await new Course(req.body);
+    const course = await new JS(req.body);
     await course.save();
     res.status(200).json({ message: 'course successfully! created.' });
 
 };
 
-exports.updateCourse = (req, res,next) => {
+exports.updatejavascript = (req, res,next) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
     form.parse(req, (err, fields, files) => {
@@ -55,7 +56,7 @@ exports.updateCourse = (req, res,next) => {
             });
         }
         // save course
-        let course = req.course;
+        let course = req.js;
       
         course = _.extend(course, fields);
 
@@ -81,8 +82,8 @@ exports.updateCourse = (req, res,next) => {
 
 
 
-exports.deleteCourse = (req, res, next) => {
-    let course = req.course;
+exports.deletejavascript = (req, res, next) => {
+    let course = req.js;
     course.remove((err, user) => {
         if (err) {
             return res.status(400).json({
@@ -92,4 +93,6 @@ exports.deleteCourse = (req, res, next) => {
         res.json({ message: 'course deleted successfully' });
     });
 };
+
+
 
